@@ -1,0 +1,11 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2021"
+
+# STRICTLY EMPTY — everything is written in-tree (see PLAN.md §1).
+[dependencies]
+
+[features]
+# Deliberately fault after boot to exercise the ESR/FAR crash dump (M2 gate).
+fault-test = []

@@ -1,0 +1,8 @@
+[package]
+name = "netharness"
+version = "0.1.0"
+edition = "2021"
+
+# Host-side `cargo test` harness over the EXACT kernel net/http sources
+# (#[path] includes — the kernel keeps its zero-dependency rule).
+[dependencies]

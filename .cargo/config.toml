@@ -1,0 +1,5 @@
+# Mandatory for MMU-off windows (pre-M2 page tables / post-EL2-drop): the
+# aarch64-unknown-uefi target spec lacks +strict-align, so the compiler would
+# otherwise emit unaligned accesses that fault while all memory is Device-nGnRnE.
+[target.aarch64-unknown-uefi]
+rustflags = ["-C", "target-feature=+strict-align"]
